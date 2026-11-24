@@ -7,6 +7,14 @@ def encode_word(word):
 
     return inputs
 
+def neuron(inputs, weights, bias=0):
+    total = bias
+
+    for value, weight in zip(inputs, weights): #pra cada valor e peso, em valores com peso
+        total += value * weight  # cada conecção no diagrama
+
+    return max(0, total)  # negativo = 0 ou vem maior
+
 def main():
     contentInput = input()  # primeira camada de entrada
     contentInput = contentInput.lstrip()
