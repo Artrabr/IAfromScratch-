@@ -1,3 +1,12 @@
+def encode_word(word):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    inputs = [0] * 500
+
+    for position, letter in enumerate(word.lower()):
+        inputs[position] = alphabet.index(letter) + 1
+
+    return inputs
+
 def main():
     contentInput = input()  # primeira camada de entrada
     contentInput = contentInput.lstrip()
